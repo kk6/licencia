@@ -29,9 +29,11 @@ class ListCommand(Command):
             sys.exit(1)
 
         results = search_packages_info(package_names)
-        if self.option("order") == "license":
-            results = sorted(results, key=lambda p: p["license"])
 
         rows = [(p["name"], p["license"]) for p in results]
         table = create_table(rows)
+
+        if self.option("order") == "license":
+            table.sort("license")
+
         print(table)
