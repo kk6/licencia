@@ -22,7 +22,7 @@ class ListCommand(Command):
         try:
             pyproject = load_toml("poetry.lock")
         except FileNotFoundError:
-            self.line_error("<error>The lock file not found.</error>")
+            self.line_error("ERROR: The lock file not found.", style="error")
             sys.exit(1)
 
         package_names = get_package_names(pyproject)
