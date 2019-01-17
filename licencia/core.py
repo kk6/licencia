@@ -31,20 +31,33 @@ def get_package_names(pyproject):
     return package_names
 
 
-def create_table(rows):
+def create_table(rows, order, style):
     """
     Create table for display
 
     :param list rows: table rows
+    :param str order: table sorted order
+    :param str style: table style
     :return: table for display
     :rtype: BeautifulTable
 
     """
     table = BeautifulTable()
-    table.set_style(BeautifulTable.STYLE_COMPACT)
     table.column_headers = ["name", "license"]
     table.column_alignments["name"] = BeautifulTable.ALIGN_LEFT
     table.column_alignments["license"] = BeautifulTable.ALIGN_LEFT
+
+    if style == "markdown":
+        table.set_style(BeautifulTable.STYLE_MARKDOWN)
+    elif style == "rst":
+        table.set_style(BeautifulTable.STYLE_RESTRUCTURED_TEXT)
+    else:
+        table.set_style(BeautifulTable.STYLE_COMPACT)
+
     for row in rows:
         table.append_row(row)
+
+    if order == "license":
+        table.sort("license")
+
     return table

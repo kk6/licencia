@@ -14,6 +14,8 @@ class ListCommand(Command):
 
     list
         {--o|order=name : Control display order by "name" or "license".}
+        {--f|format=compact : Select the output format among: "compact", "markdown", or "rst"}
+
     """
 
     def handle(self):
@@ -31,9 +33,9 @@ class ListCommand(Command):
         results = search_packages_info(package_names)
 
         rows = [(p["name"], p["license"]) for p in results]
-        table = create_table(rows)
 
-        if self.option("order") == "license":
-            table.sort("license")
+        order = self.option("order")
+        style = self.option("format")
+        table = create_table(rows, order=order, style=style)
 
         print(table)
