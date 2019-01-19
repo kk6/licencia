@@ -1,10 +1,10 @@
 import sys
 
 from cleo import Command
-from pip._internal.commands.show import search_packages_info
 
 from .core import create_table
 from .core import get_package_names
+from .core import get_packages_metadata
 from .core import load_toml
 
 
@@ -30,7 +30,7 @@ class ListCommand(Command):
             self.line("No data")
             sys.exit(1)
 
-        results = search_packages_info(package_names)
+        results = get_packages_metadata(package_names)
 
         rows = [(p["name"], p["license"]) for p in results]
 

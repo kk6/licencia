@@ -1,3 +1,4 @@
+import importlib_metadata
 import tomlkit
 from beautifultable import BeautifulTable
 
@@ -29,6 +30,29 @@ def get_package_names(pyproject):
         if pkg["category"] == "main":
             package_names.append(pkg["name"])
     return package_names
+
+
+def get_packages_metadata(package_names):
+    """
+    Get list of installed package's metadata
+
+    :param list package_names: Install package names.
+    :return: list of dict. Dict contains package name and license.
+    :rtype: list
+
+    """
+    results = []
+    for name in package_names:
+        d = {"name": name}
+        try:
+            metadata = importlib_metadata.metadata(name)
+        except importlib_metadata.api.PackageNotFoundError:
+            continue
+        else:
+            d["version"] = metadata["Version"]
+            d["license"] = metadata["License"]
+            results.append(d)
+    return results
 
 
 def create_table(rows, order, style):
