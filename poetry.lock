@@ -98,7 +98,7 @@ python-versions = "*"
 version = "1.1.8"
 
 [[package]]
-category = "dev"
+category = "main"
 description = "Read metadata from Python packages"
 name = "importlib-metadata"
 optional = false
@@ -289,7 +289,7 @@ python-versions = "*"
 version = "0.1.7"
 
 [[package]]
-category = "dev"
+category = "main"
 description = "Pathlib-compatible object wrapper for zip files"
 name = "zipp"
 optional = false
@@ -297,7 +297,7 @@ python-versions = ">=2.7"
 version = "0.3.3"
 
 [metadata]
-content-hash = "f20e23db2c159cd97c686d833c190cadd6d31e3d5eb6111a8f1674ff9f212bf1"
+content-hash = "0f9a28b4fc4575687219ba01bc5f1e06a2ac48a5712e5aeb411db3eace47bb4f"
 python-versions = "^3.7"
 
 [metadata.hashes]
