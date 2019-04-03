@@ -15,7 +15,7 @@ beautifultable = ">=0.6,<0.8"
 importlib-metadata = "^0.8.0"
 
 [tool.poetry.dev-dependencies]
-pytest = "^4.3"
+pytest = "^4.4"
 pre-commit = "^1.15"
 towncrier = "^19.2"
 
