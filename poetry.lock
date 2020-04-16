@@ -42,12 +42,10 @@ description = "Cleo allows you to create beautiful and testable command-line int
 name = "cleo"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.7.2"
+version = "0.8.0"
 
 [package.dependencies]
-clikit = ">=0.2.0,<0.3.0"
-pastel = ">=0.1.0,<0.2.0"
-pylev = ">=1.3,<2.0"
+clikit = ">=0.5.0,<0.6.0"
 
 [[package]]
 category = "dev"
@@ -63,11 +61,15 @@ description = "CliKit is a group of utilities to build beautiful and testable co
 name = "clikit"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.2.3"
+version = "0.5.1"
 
 [package.dependencies]
-pastel = ">=0.1.0,<0.2.0"
+pastel = ">=0.2.0,<0.3.0"
 pylev = ">=1.3,<2.0"
+
+[package.dependencies.woops]
+python = ">=3.6,<4.0"
+version = ">=0.2.1,<0.3.0"
 
 [[package]]
 category = "dev"
@@ -170,8 +172,8 @@ category = "main"
 description = "Bring colors to your terminal."
 name = "pastel"
 optional = false
-python-versions = "*"
-version = "0.1.0"
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "0.2.0"
 
 [[package]]
 category = "dev"
@@ -330,6 +332,15 @@ version = "0.1.7"
 
 [[package]]
 category = "main"
+description = "Handle and manage Python errors with ease"
+marker = "python_version >= \"3.6\" and python_version < \"4.0\""
+name = "woops"
+optional = false
+python-versions = ">=3.6,<4.0"
+version = "0.2.1"
+
+[[package]]
+category = "main"
 description = "Backport of pathlib-compatible object wrapper for zip files"
 name = "zipp"
 optional = false
@@ -341,7 +352,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "b64c7aa269597c56e2ec977225504f44a1d1f5205acfa2f3d8f860b49d109523"
+content-hash = "3a60faea666c316597f4b503ac64b30acb84793b077a77b27be3f2a69ce3f4d9"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -362,16 +373,16 @@ cfgv = [
     {file = "cfgv-3.1.0.tar.gz", hash = "sha256:c8e8f552ffcc6194f4e18dd4f68d9aef0c0d58ae7e7be8c82bee3c5e9edfa513"},
 ]
 cleo = [
-    {file = "cleo-0.7.2-py2.py3-none-any.whl", hash = "sha256:a39fa806fd3f64ff0ae4e3a55bb80c8ce60ca73634e13619731d63a04a63be69"},
-    {file = "cleo-0.7.2.tar.gz", hash = "sha256:7a5000de616de42fd78f968192651b9174bf333a9079fc9d68ccc672ddfd3624"},
+    {file = "cleo-0.8.0-py2.py3-none-any.whl", hash = "sha256:dcb791b246c02d59ea8eaf05a05d986e547dbe8ba2496ed59048e5d4ab93b537"},
+    {file = "cleo-0.8.0.tar.gz", hash = "sha256:b2d56e93b182358591d0ec46c4f787736378a6a8adf4a6512f72aeb0506de981"},
 ]
 click = [
     {file = "Click-7.0-py2.py3-none-any.whl", hash = "sha256:2335065e6395b9e67ca716de5f7526736bfa6ceead690adf616d925bdc622b13"},
     {file = "Click-7.0.tar.gz", hash = "sha256:5b94b49521f6456670fdb30cd82a4eca9412788a93fa6dd6df72c94d5a8ff2d7"},
 ]
 clikit = [
-    {file = "clikit-0.2.3-py2.py3-none-any.whl", hash = "sha256:e23ac911afb7079ae0e4d89af73ee0d31c8952c64ef4fcf76bcd46bfde9aabaa"},
-    {file = "clikit-0.2.3.tar.gz", hash = "sha256:7bbd38fcb912058c689a03f487a66f8d1eb1f486bc5cf68d4a5798093bd0217f"},
+    {file = "clikit-0.5.1-py2.py3-none-any.whl", hash = "sha256:f697b6e3125cf4bdc6394184c687f52fe3323152ca6bb99db444201f32904a64"},
+    {file = "clikit-0.5.1.tar.gz", hash = "sha256:2e9cd4c87539d9a0f0275b26e3e50d2d531d7bfbcf4f91909aaa013cfac9d0e1"},
 ]
 colorama = [
     {file = "colorama-0.4.1-py2.py3-none-any.whl", hash = "sha256:f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"},
@@ -436,8 +447,8 @@ packaging = [
     {file = "packaging-20.3.tar.gz", hash = "sha256:3c292b474fda1671ec57d46d739d072bfd495a4f51ad01a055121d81e952b7a3"},
 ]
 pastel = [
-    {file = "pastel-0.1.0-py3-none-any.whl", hash = "sha256:d1fee8079534f99f1805a044fef946d23eee6d6a7cd34292c30e6c16be9a80b9"},
-    {file = "pastel-0.1.0.tar.gz", hash = "sha256:3108af417ec0fa6d0a620e676ec4f02c839ca13e10611586e5d2174b46aa0bc3"},
+    {file = "pastel-0.2.0-py2.py3-none-any.whl", hash = "sha256:18b559dc3ad4ba9b8bd5baebe6503f25f36d21460f021cf27a8d889cb5d17840"},
+    {file = "pastel-0.2.0.tar.gz", hash = "sha256:46155fc523bdd4efcd450bbcb3f2b94a6e3b25edc0eb493e081104ad09e1ca36"},
 ]
 pluggy = [
     {file = "pluggy-0.13.1-py2.py3-none-any.whl", hash = "sha256:966c145cd83c96502c3c3868f50408687b38434af77734af1e9ca461a4081d2d"},
@@ -500,6 +511,10 @@ virtualenv = [
 wcwidth = [
     {file = "wcwidth-0.1.7-py2.py3-none-any.whl", hash = "sha256:f4ebe71925af7b40a864553f761ed559b43544f8f71746c2d756c7fe788ade7c"},
     {file = "wcwidth-0.1.7.tar.gz", hash = "sha256:3df37372226d6e63e1b1e1eda15c594bca98a22d33a23832a90998faa96bc65e"},
+]
+woops = [
+    {file = "woops-0.2.1-py3-none-any.whl", hash = "sha256:77f7179941d0a3d354d923f71428ee2c2519e0b86f465ed5882b98a6d00ec7f0"},
+    {file = "woops-0.2.1.tar.gz", hash = "sha256:f95dee22e055b61980209fdf481f33e743e02d5ef135853c9089d0061370f94a"},
 ]
 zipp = [
     {file = "zipp-3.1.0-py3-none-any.whl", hash = "sha256:aa36550ff0c0b7ef7fa639055d797116ee891440eac1a56f378e2d3179e0320b"},
