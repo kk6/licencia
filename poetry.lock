@@ -25,7 +25,7 @@ description = "Print ASCII tables for terminals"
 name = "beautifultable"
 optional = false
 python-versions = "*"
-version = "0.7.0"
+version = "0.8.0"
 
 [[package]]
 category = "dev"
@@ -315,7 +315,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "fbe7c30a09b8993c57c43073cd967ace0dc3fe89c19de5191a63fa3f3b8e2459"
+content-hash = "f340f5e7d323721608a85974a237862ce9813e9a81cb1339808291f77c8b7131"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -328,8 +328,8 @@ attrs = [
     {file = "attrs-18.2.0.tar.gz", hash = "sha256:10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69"},
 ]
 beautifultable = [
-    {file = "beautifultable-0.7.0-py2.py3-none-any.whl", hash = "sha256:f1185c5bbb2d522a9c7dfe24cc55151f32379031d001c9731a2b55714b927089"},
-    {file = "beautifultable-0.7.0.tar.gz", hash = "sha256:8deee768c7939578412f930c95c2ac51307fb723a6368e9e233091cdad240537"},
+    {file = "beautifultable-0.8.0-py2.py3-none-any.whl", hash = "sha256:28e2e93d44a4e84511c4869da4b907345435a06728925e295790f24e1d57300c"},
+    {file = "beautifultable-0.8.0.tar.gz", hash = "sha256:d44d9551bbed7bfa88675324f84efb9aa857384d44e9fb21eb530f0a0badb815"},
 ]
 cfgv = [
     {file = "cfgv-3.1.0-py2.py3-none-any.whl", hash = "sha256:1ccf53320421aeeb915275a196e23b3b8ae87dea8ac6698b1638001d4a486d53"},
