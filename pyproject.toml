@@ -16,7 +16,7 @@ importlib-metadata = ">=0.8,<1.7"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.4"
-pre-commit = "^2.3"
+pre-commit = "^2.4"
 towncrier = "^19.2"
 
 [tool.towncrier]
