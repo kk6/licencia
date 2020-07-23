@@ -34,7 +34,10 @@ description = "Print ASCII tables for terminals"
 name = "beautifultable"
 optional = false
 python-versions = "*"
-version = "0.8.0"
+version = "1.0.0"
+
+[package.dependencies]
+wcwidth = "*"
 
 [[package]]
 category = "dev"
@@ -363,7 +366,7 @@ docs = ["sphinx (>=3)", "sphinx-argparse (>=0.2.5)", "sphinx-rtd-theme (>=0.4.3)
 testing = ["pytest (>=4)", "coverage (>=5)", "coverage-enable-subprocess (>=1)", "pytest-xdist (>=1.31.0)", "pytest-mock (>=2)", "pytest-env (>=0.6.2)", "pytest-randomly (>=1)", "pytest-timeout", "packaging (>=20.0)", "xonsh (>=0.9.16)"]
 
 [[package]]
-category = "dev"
+category = "main"
 description = "Measures number of Terminal column cells of wide-character codes"
 name = "wcwidth"
 optional = false
@@ -383,7 +386,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "955b0f550729751392b5e1d4b05516b93836686d4c0d43523a8ef58cedaf0817"
+content-hash = "f61f38cfde078cf5d162a00638de1041904cb8c9fe285638e0e1b5d5787d58fd"
 python-versions = "^3.7"
 
 [metadata.files]
@@ -400,8 +403,8 @@ attrs = [
     {file = "attrs-18.2.0.tar.gz", hash = "sha256:10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69"},
 ]
 beautifultable = [
-    {file = "beautifultable-0.8.0-py2.py3-none-any.whl", hash = "sha256:28e2e93d44a4e84511c4869da4b907345435a06728925e295790f24e1d57300c"},
-    {file = "beautifultable-0.8.0.tar.gz", hash = "sha256:d44d9551bbed7bfa88675324f84efb9aa857384d44e9fb21eb530f0a0badb815"},
+    {file = "beautifultable-1.0.0-py2.py3-none-any.whl", hash = "sha256:9f2e632d5af050f2e15a288e5e30fce1cadd636eda5963bbecb81fa6ace45134"},
+    {file = "beautifultable-1.0.0.tar.gz", hash = "sha256:bd4c020f66f4ab573c3376f55a7ffccfeaac98edfa7bb31d1ffedfc55c5c9473"},
 ]
 cfgv = [
     {file = "cfgv-3.1.0-py2.py3-none-any.whl", hash = "sha256:1ccf53320421aeeb915275a196e23b3b8ae87dea8ac6698b1638001d4a486d53"},
